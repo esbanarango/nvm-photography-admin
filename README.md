@@ -10,6 +10,7 @@ You will need the following things properly installed on your computer.
 * [Git](http://git-scm.com/)
 * [Node.js](http://nodejs.org/) (with NPM)
 * [Bower](http://bower.io/)
+* [Bower-Installer](https://github.com/blittle/bower-installer)
 * [Ember CLI](http://www.ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
 
@@ -19,6 +20,7 @@ You will need the following things properly installed on your computer.
 * change into the new directory
 * `npm install`
 * `bower install`
+* `bower-installer` (note that this is NOT `bower install`)
 
 ## Running / Development
 
