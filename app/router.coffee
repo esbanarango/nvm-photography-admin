@@ -4,5 +4,6 @@
 Router = Ember.Router.extend(location: config.locationType)
 Router.map ->
   @route 'login'
+  # @resource 'photos', () ->
 
 `export default Router`

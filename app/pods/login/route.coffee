@@ -1,13 +1,16 @@
 `import Ember from 'ember'`
+`import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin'`
 
-LoginRoute = Ember.Route.extend(
-  renderTemplate: ->
-    @render 'login', outlet: 'login'
+LoginRoute = Ember.Route.extend(ApplicationRouteMixin,
 
   actions:
-
   	sessionAuthenticationFailed: (error) ->
-    	console.log error
     	@controllerFor('login').set 'loginErrorMessage', 'Email or password invalid.'
+    sessionAuthenticationSucceeded: ->
+    	transition = @get 'previousTransition'
+    	if transition
+    		transition.retry()
+    	else
+    		@transitionTo 'index'
 )
 `export default LoginRoute`
