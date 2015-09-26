@@ -31,6 +31,17 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = true;
 
     ENV.host = 'http://localhost:3000';
+
+    ENV['simple-auth'] = {
+      authorizer: 'simple-auth-authorizer:devise',
+      crossOriginWhitelist: ['*']
+    };
+
+    ENV['simple-auth-devise'] = {
+      serverTokenEndpoint: 'http://localhost:3000/api/v1/login',
+      tokenAttributeName: 'token'
+    };
+
   }
 
   if (environment === 'test') {
@@ -43,6 +54,12 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+
+    ENV['simple-auth'] = {
+      authorizer: 'simple-auth-authorizer:devise',
+      store: 'simple-auth-session-store:ephemeral'
+    };
+
   }
 
   if (environment === 'production') {
