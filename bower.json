@@ -14,11 +14,12 @@
     "qunit": "~1.18.0",
     "materialize": "~0.97.0",
     "ember-simple-auth": "0.7.2",
-    "animate.css": "3.4.0",
-    "geoffgraham.animate.scss": "*"
+    "igrowl": "~3.0.1",
+    "sweetalert": "1.1.0"
   },
   "resolutions": {
-    "jquery": "^1.11.3"
+    "jquery": "^1.11.3",
+    "animate.css": "3.4.0"
   },
   "install": {
     "path": {
@@ -43,7 +44,9 @@
       "qunit-notifications",
       "materialize",
       "ember-simple-auth",
-      "geoffgraham.animate.scss"
+      "animate.css",
+      "igrowl",
+      "sweetalert"
     ]
   }
 }

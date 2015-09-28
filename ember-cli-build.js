@@ -19,5 +19,13 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
+  // sweetalert
+  app.import('bower_components/sweetalert/dist/sweetalert.min.js');
+  app.import('bower_components/sweetalert/dist/sweetalert.css');
+
+  // iGrowl
+  app.import('bower_components/igrowl/dist/js/igrowl.js');
+  app.import('bower_components/igrowl/dist/css/igrowl.css');
+
   return app.toTree();
 };
