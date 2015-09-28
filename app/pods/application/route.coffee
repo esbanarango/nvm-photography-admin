@@ -10,7 +10,8 @@ ApplicationRoute = Ember.Route.extend(ApplicationRouteMixin,
 			@transitionTo 'login'
 
 	actions:
-		sessionInvalidationSucceeded: () ->
+		sessionInvalidationSucceeded: ->
+			console.log 'Loggin out'
 			@transitionTo 'login'
 )
 

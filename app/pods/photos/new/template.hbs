@@ -1,0 +1,13 @@
+<section class='container'>
+  <div class="row">
+  	<div class="col s12 m8 offset-m2 l6 offset-l3">
+			<form class="new-photo-form col s12" {{action 'authenticate' on='submit'}}>
+			  {{md-textarea label='description' value=model.description class="col s12"}}
+
+			  <div class="actions">
+			  	{{md-btn text='Create Photo' action='save'}}
+			  </div>
+			</form>
+  	</div>
+  </div>
+</section>

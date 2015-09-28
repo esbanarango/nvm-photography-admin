@@ -1,9 +1,11 @@
 {{#if session.isAuthenticated}}
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo right">NVM</a>
-      <ul id="nav-mobile" class="left">
+      <ul class="left">
         <li><a {{ action 'invalidateSession' }}>Logout</a></li>
+      </ul>
+      <ul class="right">
+        <li>{{link-to 'New Photo' 'photos.new'}}</li>
       </ul>
     </div>
   </nav>
@@ -13,5 +15,5 @@
   {{!-- ember-cli-materialize modal container --}}
   {{md-modal-container}}
 {{else}}
-  {{outlet }}
+  {{outlet}}
 {{/if}}
