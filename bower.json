@@ -13,7 +13,9 @@
     "loader.js": "ember-cli/loader.js#3.2.1",
     "qunit": "~1.18.0",
     "materialize": "~0.97.0",
-    "ember-simple-auth": "0.7.2"
+    "ember-simple-auth": "0.7.2",
+    "animate.css": "3.4.0",
+    "geoffgraham.animate.scss": "*"
   },
   "resolutions": {
     "jquery": "^1.11.3"
@@ -37,7 +39,11 @@
       "ember-load-initializers",
       "qunit",
       "ember-qunit",
-      "ember-qunit-notifications"
+      "ember-qunit-notifications",
+      "qunit-notifications",
+      "materialize",
+      "ember-simple-auth",
+      "geoffgraham.animate.scss"
     ]
   }
 }

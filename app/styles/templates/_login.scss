@@ -1,0 +1,26 @@
+.login-container{
+	.card-panel{
+		margin-top: 50%;
+	}
+
+	form.login-form{
+		.login-errors{
+			@include wobble();
+
+			margin-bottom: 20px !important;
+			color: white;
+			font-size: 13px;
+
+			.error-message{
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+		}
+		.row{
+			&.actions{
+				margin-bottom: 25px;
+			}
+			margin-bottom: 5px;
+		}
+	}
+}
