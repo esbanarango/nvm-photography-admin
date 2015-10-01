@@ -1,0 +1,15 @@
+section.homepage{
+	.photos-grid{
+
+		.grid-item {
+			position: relative;
+		  float: left;
+		  min-width: 300px;
+		  max-width: 300px;
+		  margin: 5px;
+  		padding: 10px;
+		  img { outline: 0; max-width: 100%; height: auto; }
+		}
+
+	}
+}

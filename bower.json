@@ -15,7 +15,8 @@
     "materialize": "~0.97.0",
     "ember-simple-auth": "0.7.2",
     "igrowl": "~3.0.1",
-    "sweetalert": "1.1.0"
+    "sweetalert": "1.1.0",
+    "imagesloaded": "~3.1.8"
   },
   "resolutions": {
     "jquery": "^1.11.3",
@@ -46,7 +47,8 @@
       "ember-simple-auth",
       "animate.css",
       "igrowl",
-      "sweetalert"
+      "sweetalert",
+      "imagesloaded"
     ]
   }
 }
