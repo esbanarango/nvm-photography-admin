@@ -4,12 +4,12 @@ PhotosGridComponent = Ember.Component.extend(
 	classNames: ['grid', 'photos-grid']
 
 	_init: Ember.on('didInsertElement', ->
-	  Ember.run.scheduleOnce 'afterRender', this, ->
-			console.log('oooe')
-			$('.photos-grid').isotope
-				itemSelector: '.grid-item'
-				masonry:
-					columnWidth: 30
+		Ember.run.scheduleOnce 'afterRender', this, ->
+			@$('.photos-grid').imagesLoaded () ->
+				$('.photos-grid').isotope
+					itemSelector: '.grid-item'
+					masonry:
+						columnWidth: 30
 	)
 
 
