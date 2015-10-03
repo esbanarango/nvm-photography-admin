@@ -1,20 +1,27 @@
 `import Ember from 'ember'`
 `import DS from 'ember-data'`
+`import Attachable from '../mixins/attachable'`
+
+`const { attr } = DS`
 
 Photo = DS.Model.extend {
-  description: DS.attr 'string'
-  tagList: DS.attr 'array'
+  # Image
+  imageUrl: attr('string'),
+  attachmentAs: 'image',
+
+  description: attr 'string'
+  tagList: attr 'array'
   tags: Ember.computed.alias 'tagList'
-  aperture: DS.attr 'string'
-  exposure: DS.attr 'string'
-  iso: DS.attr 'number'
-  shutterSpeed: DS.attr 'string'
-  colorSpace: DS.attr 'string'
-  focalLength: DS.attr 'string'
-  tookAt: DS.attr 'date'
-  settings: DS.attr 'string'
-  createdAt: DS.attr 'date'
-  updatedAt: DS.attr 'date'
+  aperture: attr 'string'
+  exposure: attr 'string'
+  iso: attr 'number'
+  shutterSpeed: attr 'string'
+  colorSpace: attr 'string'
+  focalLength: attr 'string'
+  tookAt: attr 'date'
+  settings: attr 'string'
+  createdAt: attr 'date'
+  updatedAt: attr 'date'
 }
 
 `export default Photo`
