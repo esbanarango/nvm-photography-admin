@@ -1,0 +1,20 @@
+&{
+  width: 100%;
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+&.select2-container-active{
+  .select2-choices{
+    border: none;
+  }
+}
+
+.select2-choices{
+  background-image: none;
+  border: none;
+  border-bottom: 1px solid #aaa;
+}
