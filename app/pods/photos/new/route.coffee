@@ -2,11 +2,16 @@
 
 PhotosNewRoute = Ember.Route.extend
 	model: ->
-		@store.createRecord 'photo'
+	  Ember.RSVP.hash
+	    photo: @store.createRecord 'photo'
+	    tags: @store.find('tag',
+	      sort: 'name'
+	      direction: 'asc'
+	      per_page: 'all')
 
 	actions:
 		save: ->
-			photo = @get 'currentModel'
+			photo = @get 'currentModel.photo'
 			photo.saveWithAttachment().then ((record) =>
 				$.iGrowl
 					message: 'Photo saved!'

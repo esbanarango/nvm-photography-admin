@@ -7,7 +7,7 @@
           <div class="file-field input-field">
             <div class="btn">
               <span>File</span>
-              {{input-component/file file=model.image prompt='Select an image...'}}
+              {{input-component/file file=model.photo.image prompt='Select an image...'}}
             </div>
             <div class="file-path-wrapper">
               <input class="file-path validate" type="text">
@@ -15,10 +15,20 @@
           </div>
         </div>
         <div class="row">
-          {{md-textarea label='Description' value=model.description class="col s12"}}
+          {{md-textarea label='Description' value=model.photo.description class="col s12"}}
         </div>
         <div class="row">
-          {{md-input-date label='Took at' value=model.tookAt class="col s12"}}
+          {{md-input-date label='Took at' value=model.photo.tookAt class="col s12"}}
+        </div>
+        <div class="row">
+          {{select-2-taggable
+            content=model.tags
+            value=model.photo.tagList
+            optionLabelPath="name"
+            optionValuePath="name"
+            multiple=true
+            placeholder="Choose tags …"
+          }}
         </div>
 			  <div class="actions">
 			  	{{md-btn text='Create Photo' action='save'}}
