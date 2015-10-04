@@ -1,36 +1,16 @@
-  <div class="grid photos-grid">
-        <div class="grid-item">
-        <img class="activator" src="http://i.dailymail.co.uk/i/pix/2015/01/06/24730FE200000578-2898639-The_behaviour_of_crossing_their_necks_is_known_as_necking_and_is-a-16_1420546215649.jpg">
-
-      </div>
-
-        <div class="grid-item">
-        <img class="activator" src="https://avatars1.githubusercontent.com/u/1156865?v=3&s=460">
-
-      </div>
-
-    {{#each photos as |photo index|}}
-
-
-
-      <div class="grid-item">
-        <img class="activator" src="https://photos-5.dropbox.com/t/2/AAD7JjoF_-vKChV6plu_aTdodi8onMT_3jJqYJdzH4Vh7Q/12/36479625/jpeg/32x32/1/_/1/2/Photo%2030-03-13%2019%2037%2049.jpg/EKTx3hsY7NoBIAEoAQ/wjRi_zKByZfcFUze-u9rZ2MrP-kfCxvi6-apPBpwuXQ?size=1600x1200&size_mode=2">
-
-      </div>
-
-
-
-
-
-
-
-    {{/each}}
-
-      <div class="grid-item">
-        <img class="activator" src="http://i.dailymail.co.uk/i/pix/2015/01/06/2473105600000578-2898639-image-a-19_1420546215668.jpg">
-
-      </div>
-
-
-
+<div class="grid photos-grid">
+  <div class="grid-item">
+    <img src="http://i.dailymail.co.uk/i/pix/2015/01/06/24730FE200000578-2898639-The_behaviour_of_crossing_their_necks_is_known_as_necking_and_is-a-16_1420546215649.jpg">
   </div>
+  <div class="grid-item">
+    <img src="https://avatars1.githubusercontent.com/u/1156865?v=3&s=460">
+  </div>
+  {{#each photos as |photo index|}}
+    <div class="grid-item">
+      <img src={{photo.imageUrl}}>
+    </div>
+  {{/each}}
+  <div class="grid-item">
+    <img class="activator" src="http://i.dailymail.co.uk/i/pix/2015/01/06/2473105600000578-2898639-image-a-19_1420546215668.jpg">
+  </div>
+</div>

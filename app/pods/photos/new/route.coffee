@@ -7,7 +7,7 @@ PhotosNewRoute = Ember.Route.extend
 	actions:
 		save: ->
 			photo = @get 'currentModel'
-			photo.save().then ((record) =>
+			photo.saveWithAttachment().then ((record) =>
 				$.iGrowl
 					message: 'Photo saved!'
 					type: 'success'

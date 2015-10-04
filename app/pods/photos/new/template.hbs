@@ -4,6 +4,8 @@
 			<form class="new-photo-form col s12" {{action 'authenticate' on='submit'}}>
 			  {{md-textarea label='description' value=model.description class="col s12"}}
 
+        {{input-component/file file=model.image prompt='Select an image...'}}
+
 			  <div class="actions">
 			  	{{md-btn text='Create Photo' action='save'}}
 			  </div>

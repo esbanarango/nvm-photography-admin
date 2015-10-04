@@ -4,7 +4,7 @@
 
 `const { attr } = DS`
 
-Photo = DS.Model.extend {
+Photo = DS.Model.extend Attachable, {
   # Image
   imageUrl: attr('string'),
   attachmentAs: 'image',
