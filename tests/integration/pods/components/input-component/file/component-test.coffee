@@ -6,7 +6,7 @@ moduleForComponent 'input-component/file', 'Integration | Component | input comp
 }
 
 test 'it renders', (assert) ->
-  assert.expect 2
+  assert.expect 1
 
   # Set any properties with @set 'myProperty', 'value'
   # Handle any actions with @on 'myAction', (val) ->
@@ -14,12 +14,3 @@ test 'it renders', (assert) ->
   @render hbs """{{input-component/file}}"""
 
   assert.equal @$().text().trim(), ''
-
-  # Template block usage:
-  @render hbs """
-    {{#input-component/file}}
-      template block text
-    {{/input-component/file}}
-  """
-
-  assert.equal @$().text().trim(), 'template block text'

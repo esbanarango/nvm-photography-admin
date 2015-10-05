@@ -7,7 +7,7 @@
   </div>
   {{#each photos as |photo index|}}
     <div class="grid-item">
-      <img src={{photo.imageUrl}}>
+      <img src={{photo-url-size photo.imageUrl 'small'}}>
     </div>
   {{/each}}
   <div class="grid-item">
